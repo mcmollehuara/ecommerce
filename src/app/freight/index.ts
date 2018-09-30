@@ -1,0 +1,1 @@
+export {FreightModule} from './freight.module'

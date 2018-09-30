@@ -1,0 +1,133 @@
+/* Add here all your css styles (customizations) */
+
+.search-tours-title-wrapper {
+    background: #31353e;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.search-tours-col-bg-default {
+    background: #55AA55;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.header-v6 .navbar-nav > li > a, .header-v6 .navbar-nav > li > a:hover, .header-v6 .navbar-nav > li > a:focus, .header-v6 .navbar-nav > .active > a, .header-v6 .navbar-nav > .active > a:hover, .header-v6 .navbar-nav > .active > a:focus {
+    color: #000;
+    font-weight: 200;
+    background: none;
+}
+.our-tours-price {
+    color: #fff;
+    background: #31353E;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: bold;
+    padding: 10px 11px;
+    transition: all 0.3s ease-in-out;
+}
+
+.our-tours-list-item h3 {
+    color: #fff;
+    font-size: 18px;
+    margin: 10 0 5px;
+    font-weight:lighter;
+}
+.header-v6 .navbar-nav > li > a, .header-v6 .navbar-nav > li > a:hover, .header-v6 .navbar-nav > li > a:focus, .header-v6 .navbar-nav > .active > a, .header-v6 .navbar-nav > .active > a:hover, .header-v6 .navbar-nav > .active > a:focus {
+    color: #55AA55;
+    font-weight: 200;
+}
+.header-v5 .navbar-brand {
+    z-index: 1;
+    padding: 10px 10px 10px 15px;
+}
+.header-v5 .navbar-default .navbar-nav > li > a {
+    color: #687074;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.g-pb-72 {
+    padding-bottom: 70px;
+    background: #31353e url(../img/mapa_back.jpg) no-repeat 50% 0 / cover;
+}
+
+@media (min-width: 992px){
+.header-v6 .navbar-nav > li > a, .header-v6 .navbar-nav > li > a:hover, .header-v6 .navbar-nav > li > a:focus, .header-v6 .navbar-nav > .active > a, .header-v6 .navbar-nav > .active > a:hover, .header-v6 .navbar-nav > .active > a:focus 
+{
+    color: #000;
+    font-weight: 200;
+    background: none;
+}
+}
+.breadcrumbs {
+    overflow: hidden;
+    padding: 10px 0 6px;
+    border-bottom: solid 1px #55AA55;
+    background: url(../img/breadcrumbs.png) repeat;
+}
+.breadcrumbs h1 {
+    color: #fff;
+    font-size: 22px;
+    margin-top: 8px;
+}
+.breadcrumb li.active, .breadcrumb li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.breadcrumb a {
+    color: #fff;
+}
+.breadcrumbs-v4 {
+    width: 100%;
+    padding: 25px 0;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+     background: rgba(0,0,0,0.3);
+    background-image: url(../img/breadcrumbs-img.jpg);
+    background-size: cover;
+}
+.breadcrumbs-v42 {
+    width: 100%;
+    padding: 25px 0;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+     background: rgba(0,0,0,0.3);
+    background-image: url(../img/breadcrumbs-img2.jpg);
+    background-size: cover;
+}
+.breadcrumbs-v42 h1 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 200;
+    margin: 0 0 20px;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+.breadcrumbs-v42 span.page-name {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 200;
+    margin: 0 0 5px 3px;
+}
+.breadcrumbs-v42 .breadcrumb-v42-in li a {
+    color: #fff;
+}
+.breadcrumbs-v42 .breadcrumb-v42-in {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.breadcrumbs-v42 .breadcrumb-v42-in > li {
+    color: #fff;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.g-pt-100 {
+    padding-top: 40px; 
+}

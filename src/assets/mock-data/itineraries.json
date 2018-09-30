@@ -1,0 +1,364 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "departure": "CAJAMARCA",
+            "arrival": "CHICLAYO",
+            "departureHour": "10:30am",
+            "serviceName": "Kuntur Wasi Clásico",
+            "priceLivel1": "20",
+            "priceLivel2": ""
+        },
+        {
+            "id": 2,
+            "departure": "CAJAMARCA",
+            "arrival": "CHICLAYO",
+            "departureHour": "1:45pm",
+            "serviceName": "Kuntur Wasi Plata",
+            "priceLivel1": "35",
+            "priceLivel2": "25"
+        },
+        {
+            "id": 3,
+            "departure": "CAJAMARCA",
+            "arrival": "CHICLAYO",
+            "departureHour": "10:45am",
+            "serviceName": "Kuntur Wasi Plata",
+            "priceLivel1": "35",
+            "priceLivel2": "25"
+        },
+        {
+            "id": 4,
+            "departure": "CAJAMARCA",
+            "arrival": "LIMA",
+            "departureHour": "4:00pm",
+            "serviceName": "Kuntur Wasi Clásico",
+            "priceLivel1": "50",
+            "priceLivel2": ""
+        },
+        {
+            "id": 5,
+            "departure": "CAJAMARCA",
+            "arrival": "LIMA",
+            "departureHour": "5:00pm",
+            "serviceName": "Kuntur Wasi Plata",
+            "priceLivel1": "80",
+            "priceLivel2": "60"
+        },
+        {
+            "id": 6,
+            "departure": "CAJAMARCA",
+            "arrival": "LIMA",
+            "departureHour": "6:00pm",
+            "serviceName": "Kuntur Wasi Plata",
+            "priceLivel1": "90",
+            "priceLivel2": "80"
+        },
+        {
+            "id": 7,
+            "departure": "CAJAMARCA",
+            "arrival": "LIMA",
+            "departureHour": "7:00pm",
+            "serviceName": "Kuntur Wasi Oro",
+            "priceLivel1": "100",
+            "priceLivel2": "100"
+        },
+        {
+            "id": 8,
+            "departure": "CAJAMARCA",
+            "arrival": "PIURA",
+            "departureHour": "9:45pm",
+            "serviceName": "Kuntur Wasi Plata",
+            "priceLivel1": "60",
+            "priceLivel2": "50"
+        },
+        {
+            "id": 9,
+            "departure": "CAJAMARCA",
+            "arrival": "PIURA",
+            "departureHour": "10:30pm",
+            "serviceName": "Kuntur Wasi Oro",
+            "priceLivel1": "60",
+            "priceLivel2": "60"
+        },
+        {
+            "id": 10,
+            "departure": "CAJAMARCA",
+            "arrival": "TRUJILLO",
+            "departureHour": "10:00am",
+            "serviceName": "Kuntur Wasi Clásico",
+            "priceLivel1": "20",
+            "priceLivel2": ""
+        },
+        {
+            "id": 11,
+            "departure": "CAJAMARCA",
+            "arrival": "TRUJILLO",
+            "departureHour": "1:15pm",
+            "serviceName": "Kuntur Wasi Oro",
+            "priceLivel1": "40",
+            "priceLivel2": "40"
+        },
+        {
+            "id": 12,
+            "departure": "CAJAMARCA",
+            "arrival": "TRUJILLO",
+            "departureHour": "10:00pm",
+            "serviceName": "Kuntur Wasi Clásico",
+            "priceLivel1": "25",
+            "priceLivel2": ""
+        },
+        {
+            "id": 13,
+            "departure": "CAJAMARCA",
+            "arrival": "TRUJILLO",
+            "departureHour": "11:00pm",
+            "serviceName": "Kuntur Wasi Oro",
+            "priceLivel1": "40",
+            "priceLivel2": "40"
+        },
+        {
+            "id": 14,
+            "departure": "CHEPÉN",
+            "arrival": "LIMA",
+            "departureHour": "7:00pm",
+            "serviceName": "Kuntur Wasi Oro",
+            "priceLivel1": "70",
+            "priceLivel2": "70"
+        },
+        {
+            "id": 15,
+            "departure": "CHICLAYO",
+            "arrival": "CAJAMARCA",
+            "departureHour": "8:00am",
+            "serviceName": "Kuntur Wasi Clásico",
+            "priceLivel1": "25",
+            "priceLivel2": ""
+        },
+        {
+            "id": 16,
+            "departure": "CHICLAYO",
+            "arrival": "CAJAMARCA",
+            "departureHour": "5:00pm",
+            "serviceName": "Kuntur Wasi Clásico",
+            "priceLivel1": "25",
+            "priceLivel2": ""
+        },
+        {
+            "id": 17,
+            "departure": "CHICLAYO",
+            "arrival": "CAJAMARCA",
+            "departureHour": "10:45pm",
+            "serviceName": "Kuntur Wasi Plata",
+            "priceLivel1": "35",
+            "priceLivel2": "25"
+        },
+        {
+            "id": 18,
+            "departure": "CHICLAYO",
+            "arrival": "LIMA",
+            "departureHour": "7:00pm",
+            "serviceName": "Kuntur Wasi Oro",
+            "priceLivel1": "80",
+            "priceLivel2": "80"
+        },
+        {
+            "id": 19,
+            "departure": "JAÉN",
+            "arrival": "PIURA",
+            "departureHour": "10:00pm",
+            "serviceName": "Kuntur Wasi Plata",
+            "priceLivel1": "50",
+            "priceLivel2": "40"
+        },
+        {
+            "id": 20,
+            "departure": "JAÉN",
+            "arrival": "TRUJILLO",
+            "departureHour": "8:30pm",
+            "serviceName": "Kuntur Wasi Plata",
+            "priceLivel1": "50",
+            "priceLivel2": "40"
+        },
+        {
+            "id": 21,
+            "departure": "LIMA",
+            "arrival": "CAJAMARCA",
+            "departureHour": "4:00pm",
+            "serviceName": "Kuntur Wasi Clásico",
+            "priceLivel1": "50",
+            "priceLivel2": ""
+        },
+        {
+            "id": 22,
+            "departure": "LIMA",
+            "arrival": "CAJAMARCA",
+            "departureHour": "5:00pm",
+            "serviceName": "Kuntur Wasi Plata",
+            "priceLivel1": "80",
+            "priceLivel2": "60"
+        },
+        {
+            "id": 23,
+            "departure": "LIMA",
+            "arrival": "CAJAMARCA",
+            "departureHour": "6:00pm",
+            "serviceName": "Kuntur Wasi Plata",
+            "priceLivel1": "90",
+            "priceLivel2": "80"
+        },
+        {
+            "id": 24,
+            "departure": "LIMA",
+            "arrival": "CAJAMARCA",
+            "departureHour": "7:00pm",
+            "serviceName": "Kuntur Wasi Oro",
+            "priceLivel1": "100",
+            "priceLivel2": "100"
+        },
+        {
+            "id": 25,
+            "departure": "LIMA",
+            "arrival": "CHEPÉN",
+            "departureHour": "9:00pm",
+            "serviceName": "Kuntur Wasi Oro",
+            "priceLivel1": "70",
+            "priceLivel2": "70"
+        },
+        {
+            "id": 26,
+            "departure": "LIMA",
+            "arrival": "CHICLAYO",
+            "departureHour": "7:30pm",
+            "serviceName": "Kuntur Wasi Oro",
+            "priceLivel1": "80",
+            "priceLivel2": "80"
+        },
+        {
+            "id": 27,
+            "departure": "LIMA",
+            "arrival": "TRUJILLO",
+            "departureHour": "10:00pm",
+            "serviceName": "Kuntur Wasi Oro",
+            "priceLivel1": "70",
+            "priceLivel2": "70"
+        },
+        {
+            "id": 28,
+            "departure": "PIURA",
+            "arrival": "CAJAMARCA",
+            "departureHour": "7:15pm",
+            "serviceName": "Kuntur Wasi Plata",
+            "priceLivel1": "60",
+            "priceLivel2": "50"
+        },
+        {
+            "id": 29,
+            "departure": "PIURA",
+            "arrival": "CAJAMARCA",
+            "departureHour": "7:45pm",
+            "serviceName": "Kuntur Wasi Oro",
+            "priceLivel1": "60",
+            "priceLivel2": "60"
+        },
+        {
+            "id": 30,
+            "departure": "PIURA",
+            "arrival": "JAÉN",
+            "departureHour": "9:30pm",
+            "serviceName": "Kuntur Wasi Plata",
+            "priceLivel1": "50",
+            "priceLivel2": "40"
+        },
+        {
+            "id": 31,
+            "departure": "PIURA",
+            "arrival": "TARAPOTO",
+            "departureHour": "12:30pm",
+            "serviceName": "Kuntur Wasi Clásico",
+            "priceLivel1": "70",
+            "priceLivel2": ""
+        },
+        {
+            "id": 32,
+            "departure": "TARAPOTO",
+            "arrival": "PIURA",
+            "departureHour": "3:00pm",
+            "serviceName": "Kuntur Wasi Clásico",
+            "priceLivel1": "70",
+            "priceLivel2": ""
+        },
+        {
+            "id": 33,
+            "departure": "TARAPOTO",
+            "arrival": "TRUJILLO",
+            "departureHour": "4:00pm",
+            "serviceName": "Kuntur Wasi Clásico",
+            "priceLivel1": "80",
+            "priceLivel2": ""
+        },
+        {
+            "id": 34,
+            "departure": "TRUJILLO",
+            "arrival": "CAJAMARCA",
+            "departureHour": "10:00am",
+            "serviceName": "Kuntur Wasi Clásico",
+            "priceLivel1": "20",
+            "priceLivel2": ""
+        },
+        {
+            "id": 35,
+            "departure": "TRUJILLO",
+            "arrival": "CAJAMARCA",
+            "departureHour": "1:15pm",
+            "serviceName": "Kuntur Wasi Oro",
+            "priceLivel1": "40",
+            "priceLivel2": "40"
+        },
+        {
+            "id": 36,
+            "departure": "TRUJILLO",
+            "arrival": "CAJAMARCA",
+            "departureHour": "10:00pm",
+            "serviceName": "Kuntur Wasi Clásico",
+            "priceLivel1": "25",
+            "priceLivel2": ""
+        },
+        {
+            "id": 37,
+            "departure": "TRUJILLO",
+            "arrival": "CAJAMARCA",
+            "departureHour": "11:00pm",
+            "serviceName": "Kuntur Wasi Oro",
+            "priceLivel1": "40",
+            "priceLivel2": "40"
+        },
+        {
+            "id": 38,
+            "departure": "TRUJILLO",
+            "arrival": "JAÉN",
+            "departureHour": "7:00pm",
+            "serviceName": "Kuntur Wasi Plata",
+            "priceLivel1": "50",
+            "priceLivel2": "40"
+        },
+        {
+            "id": 39,
+            "departure": "TRUJILLO",
+            "arrival": "LIMA",
+            "departureHour": "9:45pm",
+            "serviceName": "Kuntur Wasi Oro",
+            "priceLivel1": "70",
+            "priceLivel2": "70"
+        },
+        {
+            "id": 40,
+            "departure": "TRUJILLO",
+            "arrival": "TARAPOTO",
+            "departureHour": "3:00pm",
+            "serviceName": "Kuntur Wasi Clásico",
+            "priceLivel1": "80",
+            "priceLivel2": ""
+        }
+    ]
+}

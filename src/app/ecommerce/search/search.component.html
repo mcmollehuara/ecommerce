@@ -1,0 +1,259 @@
+<!--=== Breadcrumbs v4 ===-->
+<div class="breadcrumbs-v4">
+    <div class="container">
+        <span class="page-name">Pasajes</span>
+        <h1>Encuentra
+            <span class="shop-green">tu</span> destino</h1>
+        <ul class="breadcrumb-v4-in">
+            <li>
+                <a href="/app/inicio">Inicio</a>
+            </li>
+            <li>
+                <a href="">Destinos</a>
+            </li>
+            <li class="active">Búsqueda</li>
+        </ul>
+    </div>
+    <!--/end container-->
+</div>
+<!--=== End Breadcrumbs v4 ===-->
+
+<!--=== Content Part ===-->
+<div class="content container g-pt-100">
+    <div class="row">
+        <div class="col-md-3 filter-by-block md-margin-bottom-60">
+            <h1>Filtros</h1>
+            <div class="panel-group" id="accordion-v0">
+                <div class="panel panel-default">
+                    <div class="sky-form">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion-v0" href="#collapseZero">
+                                    Origen
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                            </h2>
+                        </div>
+                        <div id="collapseZero" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <label class="select">
+                                    <select [(ngModel)]="departureSelected" (change)="onDepartureFilter()" class="form-control">
+                                        <option value="" selected>SELECCIONAR</option>
+                                        <option *ngFor="let c of departures" [value]="c">
+                                            {{c}}
+                                        </option>
+                                    </select>
+                                    <i></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group" id="accordion">
+                <div class="sky-form">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                    Destinos
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <label class="select">
+                                    <select [(ngModel)]="arrivalSelected" (change)="onArrivalFilter(a)" class="form-control">
+                                        <option value="" selected>SELECCIONAR</option>
+                                        <option *ngFor="let c of arrivals" [value]="c">
+                                            {{c}}
+                                        </option>
+                                    </select>
+                                    <i></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/end panel group-->
+
+            <div class="panel-group" id="accordion-v2">
+                <div class="sky-form">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion-v2" href="#collapseTwo">
+                                    Tipo Servicios
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse in">
+                            <div class="panel-body">
+
+                                <label class="select">
+                                    <select [(ngModel)]="serviceTypeSelected" (change)="onServiceFilter()"
+                                        [attr.disabled]="arrivalSelected==''?'disabled':null" class="form-control">
+                                        <option value="" selected>SELECCIONAR</option>
+                                        <option *ngFor="let c of serviceType" [value]="c">
+                                            {{c}}
+                                        </option>
+                                    </select>
+                                    <i></i>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/end panel group-->
+            <button (click)="onResetFilters()" type="button" class="btn-u btn-brd btn-brd-hover btn-u-lg btn-u-sea-shop btn-block">Borrar</button>
+        </div>
+
+        <div class="col-md-9">
+            <div class="row margin-bottom-5">
+                <div class="col-sm-4 result-category">
+                    <h2>Resultados</h2>
+                    <small class="shop-bg-red badge-results">{{_itinerary.length}} </small>
+                </div>
+                <div class="col-sm-8">
+                    <ul class="list-inline clear-both">
+                        <li class="grid-list-icons">
+                            <a href="">
+                                <i class="fa fa-th-list"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-th"></i>
+                            </a>
+                        </li>
+                        <li class="sort-list-btn">
+                            <h3>Ordenar por :</h3>
+                            <div class="btn-group">
+                                <button disabled="disabled" type="button" class="btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown">
+                                    Popularidad
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a [routerLink]="['/app/enconstruccion']">Todos</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="['/app/enconstruccion']">Mas bendidos</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="['/app/enconstruccion']">Ventas de la semana pasada</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="['/app/enconstruccion']">Recien llegados</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sort-list-btn">
+                            <h3>Mostrar :</h3>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    20
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li *ngFor="let item of pageItems">
+                                        <a (click)="onPageItemsFilter(item)">{{item}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/end result category-->
+            <div class="filter-results">
+                <div class="row illustration-v2 margin-bottom-30">
+                    <div *ngFor="let i of _itinerary | search : arrival" class="col-md-4">
+                        <div class="product-img product-img-brd">
+                            <a [routerLink]="['/app/enconstruccion']">
+                                <img class="full-width img-responsive" src="assets-trans/img/destinations/{{i.arrival}}.jpg"
+                                    alt="">
+                            </a>
+                            <a class="product-review" routerLink="/app/ecommerce/producto/{{i.id}}">Detalle</a>
+                            <a class="add-to-cart" routerLink="/app/ecommerce/carrito/{{i.id}}">
+                                <i class="fa fa-shopping-cart"></i>Agregar al carrito</a>
+                            <div class="shop-rgba-dark-green rgba-banner">Nuevo</div>
+                        </div>
+                        <div class="product-description product-description-brd margin-bottom-30">
+                            <div class="overflow-h margin-bottom-5">
+                                <div class="pull-left">
+                                    <h4 class="title-price">
+                                        <a href="shop-ui-inner.html">{{i.departure}}-{{i.arrival}}</a>
+                                    </h4>
+                                    <span class="gender text-uppercase">Hora: {{i.departureHour}}</span>
+                                    <span class="gender">Servicio: {{i.serviceName}}</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="title-price">Nivel 1: S/.{{i.priceLivel1}}</span>
+                                    <span class="title-price">Nivel 2: S/.{{i.priceLivel2}}</span>
+                                </div>
+                            </div>
+                            <ul class="list-inline product-ratings">
+                                <li>
+                                    <i class="rating-selected fa fa-star"></i>
+                                </li>
+                                <li>
+                                    <i class="rating-selected fa fa-star"></i>
+                                </li>
+                                <li>
+                                    <i class="rating-selected fa fa-star"></i>
+                                </li>
+                                <li>
+                                    <i class="rating fa fa-star"></i>
+                                </li>
+                                <li>
+                                    <i class="rating fa fa-star"></i>
+                                </li>
+                                <li class="like-icon">
+                                    <a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left"
+                                        class="tooltips" [routerLink]="['/app/enconstruccion']">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/end filter resilts-->
+
+            <div class="text-center">
+                <ul class="pagination pagination-v2">
+                    <li>
+                        <a [routerLink]="['/app/enconstruccion']">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/app/enconstruccion']">1</a>
+                    </li>
+                    <li class="active">
+                        <a [routerLink]="['/app/enconstruccion']">2</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/app/enconstruccion']">3</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/app/enconstruccion']">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--/end pagination-->
+        </div>
+    </div>
+    <!--/end row-->
+</div>
+<!--/end container-->
+<!--=== End Content Part ===-->

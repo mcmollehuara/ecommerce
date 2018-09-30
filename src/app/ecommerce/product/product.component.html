@@ -1,0 +1,498 @@
+<!--=== Breadcrumbs v4 ===-->
+<div class="breadcrumbs-v4">
+    <div class="container">
+        <span class="page-name">Pasajes</span>
+        <h1>{{itemName}}
+            <!-- <span class="shop-green"> -</span> Chiclayo -->
+        </h1>
+        <ul class="breadcrumb-v4-in">
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+            <li>
+                <a routerLink="/app/ecommerce/busqueda">Pasajes</a>
+            </li>
+            <li class="active">{{itemName}}</li>
+        </ul>
+    </div>
+    <!--/end container-->
+</div>
+<!--=== End Breadcrumbs v4 ===-->
+<!--=== Shop Product ===-->
+<div class="shop-product">
+    <div class="container   g-pt-100">
+        <div class="row">
+            <div class="col-md-6 md-margin-bottom-50">
+                <div class="ms-showcase2-template">
+                    <!-- Master Slider -->
+                    <div class="master-slider ms-skin-default" id="masterslider">
+                        <div class="ms-slide">
+                            <img class="ms-brd" src="assets-trans/img/blank.gif" data-src="assets-trans/img/blog/28e.jpg"
+                                alt="lorem ipsum dolor sit">
+                            <img class="ms-thumb" src="assets-trans/img/blog/28-thumbe.jpg" alt="thumb">
+                        </div>
+                        <div class="ms-slide">
+                            <img src="assets-trans/img/blank.gif" data-src="assets-trans/img/blog/29e.jpg" alt="lorem ipsum dolor sit">
+                            <img class="ms-thumb" src="assets-trans/img/blog/29-thumbe.jpg" alt="thumb">
+                        </div>
+                        <div class="ms-slide">
+                            <img src="assets-trans/img/blank.gif" data-src="assets-trans/img/blog/30e.jpg" alt="lorem ipsum dolor sit">
+                            <img class="ms-thumb" src="assets-trans/img/blog/30-thumbe.jpg" alt="thumb">
+                        </div>
+                    </div>
+                    <!-- End Master Slider -->
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="shop-product-heading">
+                    <h2>{{itemName}}</h2>
+                    <ul class="list-inline shop-product-social">
+                        <li>
+                            <a href="www.facebook.com">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="www.instagram.com">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="www.youtube.com">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/end shop product social-->
+
+                <!-- <ul class="list-inline product-ratings margin-bottom-30">
+                                <li>
+                                    <i class="rating-selected fa fa-star"></i>
+                                </li>
+                                <li>
+                                    <i class="rating-selected fa fa-star"></i>
+                                </li>
+                                <li>
+                                    <i class="rating-selected fa fa-star"></i>
+                                </li>
+                                <li>
+                                    <i class="rating fa fa-star"></i>
+                                </li>
+                                <li>
+                                    <i class="rating fa fa-star"></i>
+                                </li>
+                                <li class="product-review-list">
+                                    <span>(1)
+                                        <a  [routerLink]="['/app/enconstruccion']" >Revisión</a> |
+                                        <a  [routerLink]="['/app/enconstruccion']" > Agregar revisión</a>
+                                    </span>
+                                </li>
+                            </ul> -->
+                <!--/end shop product ratings-->
+
+                <p>{{itemDescription}}</p>
+
+                <!--/end shop product prices-->
+
+                <h3 class="shop-product-title">Piso:</h3>
+                <ul class="list-inline product-size margin-bottom-30">
+                    <li *ngIf="itemPriceLevel1">
+                        <input type="radio" id="size-1" name="size" (change)="levelChanging(1)">
+                        <label for="size-1">1</label>
+                    </li>
+                    <li *ngIf="itemPriceLevel2">
+                        <input type="radio" id="size-2" name="size"  (change)="levelChanging(2)">
+                        <label for="size-2">2</label>
+                    </li>
+                </ul>
+                <ul class="list-inline shop-product-prices margin-bottom-30">
+                    <li *ngIf="itemPriceLevel1" class="shop-red">S/.{{itemPriceLevel1}}</li>
+                    <li *ngIf="itemPriceLevel2" class="shop-black">S/.{{itemPriceLevel2}}</li>
+                </ul>
+
+
+                <h3 class="shop-product-title">Horario:</h3>
+                <ul class="list-inline shop-product-prices margin-bottom-30">
+                    <li class="shop-black">{{itemDepartureHour}}</li>
+                </ul>
+
+                <h3 class="shop-product-title">Cantidad</h3>
+                <div class="margin-bottom-40">
+                    <form name="f1" class="product-quantity sm-margin-bottom-20">
+                        <button type='button' class="quantity-button" name='subtract' (click)='quantityChanged(-1)' value='-'>-</button>
+                        <input type='text' class="quantity-field" name='qty' value="1" id='qty' [(ngModel)]="itemQuantity" />
+                        <button type='button' class="quantity-button" name='add' (click)='quantityChanged(1)' 
+                            value='+'>+</button>
+                    </form>
+                    <button type="button" class="btn-u btn-u-sea-shop btn-u-lg">Agregar
+                        al carrito</button>
+                    <add-to-cart (added)="addToCart($event)" [item]="cartItem" [custom]="custom" (change)="quantityChanged($event)"
+                        [type]="editor" [position]="position" [quantity]="itemQuantity" [buttonText]="label">
+                        
+                    </add-to-cart>
+                </div>
+
+
+                <ul class="list-inline add-to-wishlist add-to-wishlist-brd">
+                    <!-- <li class="wishlist-in">
+                                    <i class="fa fa-heart"></i>
+                                    <a  [routerLink]="['/app/enconstruccion']" >Agregar a favoritos</a>
+                                </li> -->
+                    <!-- <li class="compare-in">
+                                    <i class="fa fa-exchange"></i>
+                                    <a  [routerLink]="['/app/enconstruccion']" >Agregar para comparar</a>
+                                </li> -->
+                </ul>
+                <p class="wishlist-category">
+                    <strong>Categorias:</strong>
+                    <a>{{itemServiceName}}</a>
+                    <!-- <a  [routerLink]="['/app/enconstruccion']" >Turistico,</a>
+                                <a  [routerLink]="['/app/enconstruccion']" >Kuntur wasi</a> -->
+                </p>
+            </div>
+        </div>
+        <!--/end row-->
+    </div>
+</div>
+<!--=== End Shop Product ===-->
+
+<!--=== Illustration v2 ===-->
+<div class="container-fluid">
+    <div class="heading heading-v1 margin-bottom-20">
+        <h2>Productos relacionados</h2>
+        <p>Tambien puede probar estos servicios parecidos al que selecionaste</p>
+    </div>
+    <div class="our-tours-list-wrapper">
+        <div class="our-tours-list text-left">
+            <!-- Item 1 -->
+            <div class="our-tours-list-item">
+                <div class="img-wrapper img-wrapper-">
+                    <img src="assets-trans/img-temp/offers/1.jpg" alt="ALT" class="img-reposnsive">
+                </div>
+                <h3>Cajamarca</h3>
+
+                <p>Novedades y promociones</p>
+
+                <a (click)="onSearchArrival('cajamarca')" class="">VER MÁS</a>
+            </div>
+            <!-- End Item 1 -->
+
+            <!-- Item 2 -->
+            <div class="our-tours-list-item">
+                <div class="img-wrapper img-wrapper--shadow">
+                    <img src="assets-trans/img-temp/offers/7.jpg" alt="ALT" class="img-reposnsive">
+                </div>
+                <h3>Lima</h3>
+
+                <p>Novedades y promociones</p>
+
+                <a (click)="onSearchArrival('lima')" class="">VER MÁS</a>
+            </div>
+            <!-- End Item 2 -->
+
+            <!-- Item 3 -->
+            <div class="our-tours-list-item">
+                <div class="img-wrapper img-wrapper--shadow">
+                    <img src="assets-trans/img-temp/offers/2.jpg" alt="ALT" class="img-reposnsive">
+                </div>
+                <h3>Trujillo</h3>
+
+                <p>Novedades y promociones</p>
+
+                <a (click)="onSearchArrival('trujillo')" class="">VER MÁS</a>
+            </div>
+            <!-- End Item 3 -->
+
+            <!-- Item 4 -->
+            <div class="our-tours-list-item">
+                <div class="img-wrapper img-wrapper--shadow">
+                    <img src="assets-trans/img-temp/offers/4.jpg" alt="ALT" class="img-reposnsive">
+                </div>
+                <h3>Pacasmayo</h3>
+
+                <p>Novedades y promociones</p>
+
+                <a (click)="onSearchArrival('pacasmayo')" class="">VER MÁS</a>
+            </div>
+            <!-- End Item 4 -->
+
+            <!-- Item 5 -->
+            <div class="our-tours-list-item">
+                <div class="img-wrapper img-wrapper--shadow">
+                    <img src="assets-trans/img-temp/offers/3.jpg" alt="ALT" class="img-reposnsive">
+                </div>
+                <h3>Chiclayo</h3>
+
+                <p>Novedades y promociones</p>
+
+                <a (click)="onSearchArrival('chiclayo')" class="">VER MÁS</a>
+            </div>
+            <!-- End Item 5 -->
+
+            <!-- Item 6 -->
+            <div class="our-tours-list-item">
+                <div class="img-wrapper img-wrapper--shadow">
+                    <img src="assets-trans/img-temp/offers/9.jpg" alt="ALT" class="img-reposnsive">
+                </div>
+                <h3>Piura</h3>
+
+                <p>Novedades y promociones</p>
+
+                <a (click)="onSearchArrival('piura')" class="">VER MÁS</a>
+            </div>
+            <!-- End Item 6 -->
+            <!-- Item 6 -->
+            <div class="our-tours-list-item">
+                <div class="img-wrapper img-wrapper--shadow">
+                    <img src="assets-trans/img-temp/offers/10.jpg" alt="ALT" class="img-reposnsive">
+                </div>
+                <h3>Tarapoto</h3>
+
+                <p>Novedades y promociones</p>
+
+                <a (click)="onSearchArrival('tarapoto')" class="">VER MÁS</a>
+            </div>
+            <!-- End Item 6 -->
+            <!-- Item 6 -->
+            <div class="our-tours-list-item">
+                <div class="img-wrapper img-wrapper--shadow">
+                    <img src="assets-trans/img-temp/offers/8.jpg" alt="ALT" class="img-reposnsive">
+                </div>
+                <h3>Tumbes</h3>
+
+                <p>Novedades y promociones</p>
+
+                <a (click)="onSearchArrival('tumbes')" class="">VER MÁS</a>
+            </div>
+            <!-- End Item 6 -->
+        </div>
+    </div>
+</div>
+<!--=== End Illustration v2 ===-->
+
+<!--=== Content Medium ===-->
+<div class="content-md container">
+    <div class="tab-v6">
+        <!-- <ul class="nav nav-tabs" role="tablist">
+                                <li class="active">
+                                    <a href="#description" role="tab" data-toggle="tab">Descripción</a>
+                                </li>
+                                <li>
+                                    <a href="#reviews" role="tab" data-toggle="tab">Revisiones (1)</a>
+                                </li>
+                            </ul> -->
+
+        <div class="tab-content">
+            <!-- Description -->
+            <div class="tab-pane fade in active" id="description">
+                <div class="row">
+                    <div class="col-md-7">
+                        <p>Servicio con atención de tripulante a bordo de un bus de dos niveles con asientos
+                            ergonómicos cama (160°) en el 1er
+                            nivel y asientos Full Flat (180°) en el 2do nivel. El bus cuenta con aire acondicionado,
+                            video, música, GPS satelital
+                            y servicios higiénicos.En el 2do nivel, los pasajeros cuentan con una pantalla individual,
+                            Wifi: Servicio de cortesía
+                            sujeto a disponibilidad. Servicio a bordo a Huaraz: Consta de un snack y bebidas. Servicio
+                            a bordo a Chiclayo: Consta
+                            de cena y desayuno..</p>
+                        <br>
+
+                        <h3 class="heading-md margin-bottom-20">Detalle:</h3>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled specifies-list">
+                                    <li>
+                                        <i class="fa fa-caret-right"></i>TV Video:
+                                        <span>Si</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-caret-right"></i>Velocidad Controlada:
+                                        <span>Si</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-caret-right"></i>GPS:
+                                        <span>Si</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-caret-right"></i>Servicio Abordo:
+                                        <span>Si</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-caret-right"></i>Aire Acondicionado:
+                                        <span>Si</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-caret-right"></i>Calefacción:
+                                        <span>Si</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled specifies-list">
+                                    <li>
+                                        <i class="fa fa-caret-right"></i>Baño Químico:
+                                        <span>Si</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-caret-right"></i>Audio:
+                                        <span>Si</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-caret-right"></i>WIFI:
+                                        <span>Si</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="responsive-video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/SUQ8PmZf5iY"
+                                frameborder="0" allowfullscreen></iframe>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Description -->
+
+            <!-- Reviews -->
+            <div class="tab-pane fade" id="reviews">
+                <div class="product-comment margin-bottom-40">
+                    <div class="product-comment-in">
+                        <img class="product-comment-img rounded-x" src="assets-trans/img/team/01.jpg" alt="">
+                        <div class="product-comment-dtl">
+                            <h4>Miguel
+                                <small>hace 22 dias</small>
+                            </h4>
+                            <p>Me gusta este servicio desde que lo tome la primera vez hace 2 años lo he tomado
+                                frecuentemente.</p>
+                            <ul class="list-inline product-ratings">
+                                <li class="reply">
+                                    <a [routerLink]="['/app/enconstruccion']">Responder</a>
+                                </li>
+                                <li class="pull-right">
+                                    <ul class="list-inline">
+                                        <li>
+                                            <i class="rating-selected fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="rating-selected fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="rating-selected fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="rating fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="rating fa fa-star"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="heading-md margin-bottom-30">Agregar revisión</h3>
+                <form action="assets-trans/php/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form sky-changes-4">
+                    <fieldset>
+                        <div class="margin-bottom-30">
+                            <label class="label-v2">Nombre</label>
+                            <label class="input">
+                                <input type="text" name="name" id="name">
+                            </label>
+                        </div>
+
+                        <div class="margin-bottom-30">
+                            <label class="label-v2">Email</label>
+                            <label class="input">
+                                <input type="email" name="email" id="email">
+                            </label>
+                        </div>
+
+                        <div class="margin-bottom-30">
+                            <label class="label-v2">Revisión</label>
+                            <label class="textarea">
+                                <textarea rows="7" name="message" id="message"></textarea>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <footer class="review-submit">
+                        <label class="label-v2">Revision</label>
+                        <div class="stars-ratings">
+                            <input type="radio" name="stars-rating" id="stars-rating-5">
+                            <label for="stars-rating-5">
+                                <i class="fa fa-star"></i>
+                            </label>
+                            <input type="radio" name="stars-rating" id="stars-rating-4">
+                            <label for="stars-rating-4">
+                                <i class="fa fa-star"></i>
+                            </label>
+                            <input type="radio" name="stars-rating" id="stars-rating-3">
+                            <label for="stars-rating-3">
+                                <i class="fa fa-star"></i>
+                            </label>
+                            <input type="radio" name="stars-rating" id="stars-rating-2">
+                            <label for="stars-rating-2">
+                                <i class="fa fa-star"></i>
+                            </label>
+                            <input type="radio" name="stars-rating" id="stars-rating-1">
+                            <label for="stars-rating-1">
+                                <i class="fa fa-star"></i>
+                            </label>
+                        </div>
+                        <button type="button" class="btn-u btn-u-sea-shop btn-u-sm pull-right">Enviar</button>
+                    </footer>
+                </form>
+            </div>
+            <!-- End Reviews -->
+        </div>
+    </div>
+
+    <!--=== Product Service ===-->
+    <div class="row margin-bottom-60">
+        <div class="col-md-4 product-service md-margin-bottom-30">
+            <div class="product-service-heading">
+                <i class="fa fa-credit-card"></i>
+            </div>
+            <div class="product-service-in">
+                <h3>Reservas online</h3>
+                <p>Haga reserva de pasajes online a través de nuestros canales online.</p>
+                <a [routerLink]="['/app/enconstruccion']">+Leer más</a>
+            </div>
+        </div>
+        <div class="col-md-4 product-service md-margin-bottom-30">
+            <div class="product-service-heading">
+                <i class="icon-earphones-alt"></i>
+            </div>
+            <div class="product-service-in">
+                <h3>Servicio al Cliente</h3>
+                <p>
+                    Horarios de atención Lunes a Viernes de 8:30 am a 9:00 pm Sábados de 8:300 am a 12:00 pm
+                </p>
+                <a [routerLink]="['/app/enconstruccion']">+Leer más</a>
+            </div>
+        </div>
+        <div class="col-md-4 product-service">
+            <div class="product-service-heading">
+                <i class="icon-refresh"></i>
+            </div>
+            <div class="product-service-in">
+                <h3>Promociones</h3>
+                <p>Suscribete y obtén las promociones a destinos en temporadas bajas y obten un gran descuento</p>
+                <a [routerLink]="['/app/enconstruccion']">+Leer más</a>
+            </div>
+        </div>
+    </div>
+    <!--/end row-->
+    <!--=== End Product Service ===-->
+
+
+</div>
+<!--/end container-->
+<!--=== End Content Medium ===-->

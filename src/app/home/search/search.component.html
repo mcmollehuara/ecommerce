@@ -1,0 +1,57 @@
+<!-- Search Tours Section -->
+<div class="search-tours g-heading-v8">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 search-tours-title-wrapper">
+        <div class="container">
+          <h2>
+            <em class="block-name">COMPRA Y RESERVA</em>
+            <br>
+            <i class="fa fa-ticket" aria-hidden="true"></i> Pasajes</h2>
+        </div>
+      </div>
+      <div class="col-md-9 search-tours-col-bg-default">
+        <div class="container">
+          <div class="sky-form clearfix">
+            <div class="col col-3">
+              <label class="label">Origen</label>
+              <label class="select">  
+                <select [(ngModel)]="departureSelected">
+                  <option value="" selected>Seleccionar</option>
+                  <option *ngFor="let c of departures" [ngValue]="c">{{c}}</option>                  
+                </select>
+                <i></i>
+              </label>
+            </div>
+
+            <div class="col col-3">
+              <label class="label">Destino</label>
+              <label class="select">
+                <select [(ngModel)]="arrivalSelected">
+                  <option value="" selected>Seleccionar</option>
+                  <option *ngFor="let c of arrivals" [value]="c">{{c}}</option>
+                </select>
+                <i></i>
+              </label>
+            </div>
+
+
+            <div class="col col-3">
+              <label class="label">Personas</label>
+              <label class="input">
+                <span class="icon-append fa fa-users"></span>
+                <input value="1" type="text" placeholder="Numero de personas">
+              </label>
+            </div>
+
+            <div class="col col-3">
+              <a (click)="onSearch()" class="btn-u btn-u-lg btn-u-upper">
+                <i class="search fa fa-search search-btn"></i> Buscar</a>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Search Tours Section -->

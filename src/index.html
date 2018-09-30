@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1 , shrink-to-fit=no">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <meta name="description" content="<%= htmlWebpackPlugin.options.metadata.description %>">
+  <!-- base url -->
+  <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">
+  <% if (webpackConfig.htmlElements.headTags) { %>
+  <!-- Configured Head Tags  -->
+  <%= webpackConfig.htmlElements.headTags %>
+  <% } %>
+
+  <%= htmlWebpackPlugin.files.webpackManifest %>
+
+  <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
+  <!-- Webpack Dev Server reload -->
+  <script src="/webpack-dev-server.js"></script>
+  <% } %>
+
+  <!-- Async Google Tag Manager: change gtmKey value inside config.prod.conf to your to be your site's ID-->
+  <% if (htmlWebpackPlugin.options.gtmKey) { %>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', '<%= htmlWebpackPlugin.options.gtmKey %>');</script>
+  <!-- End Google Tag Manager -->
+  <% } %>
+  <!-- End Google Analytics -->
+
+  <!-- CSS will be injected by webpack here -->
+  <!-- Preload link tags will be injected by webpack here -->
+
+  <!-- Web Fonts -->
+  <!-- TODO -->
+  <!-- <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'> -->
+
+
+  <!-- CSS Global Compulsory -->
+  <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/app.css">
+  <link rel="stylesheet" href="../assets/css/blocks.css">
+  <!-- <link rel="stylesheet" href="../assets/css/one.style.css"> -->
+  <link rel="stylesheet" href="../assets/css/shop.style.css">
+
+  <!-- CSS Header and Footer -->
+  <link rel="stylesheet" href="../assets/css/headers/header-v5.css">
+  <link rel="stylesheet" href="../assets/css/footers/footer-v1.css">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="../assets/plugins/animate.css">
+  <link rel="stylesheet" href="../assets/plugins/line-icons/line-icons.css">
+  <link rel="stylesheet" href="../assets/plugins/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+  <link rel="stylesheet" href="../assets/plugins/layer-slider/layerslider/css/layerslider.css">
+
+  <!-- CSS Implementing Plugins -->
+  <!-- <link rel="stylesheet" href="../assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css"> -->
+  <link rel="stylesheet" href="../assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+  <!-- <link rel="stylesheet" href="../assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css"> -->
+
+  <link rel="stylesheet" href="../assets/plugins/owl-carousel2/assets/owl.carousel.css">
+
+  <link rel="stylesheet" href="../assets/plugins/parallax-slider/css/parallax-slider.css">
+  <link rel="stylesheet" href="../assets/plugins/master-slider/masterslider/style/masterslider.css">
+  <link rel="stylesheet" href="../assets/plugins/master-slider/u-styles/testimonials-1.css">
+  <link rel="stylesheet" href="../assets/plugins/master-slider/u-styles/promo-1.css">
+  <link rel="stylesheet" href="../assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
+  <link rel="stylesheet" href="../assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
+  <!-- CSS Theme -->
+  <link rel="stylesheet" href="../assets/css/theme-colors/default.css" id="style_color">
+  <link rel="stylesheet" href="../assets/css/theme-skins/dark.css">
+  <link rel="stylesheet" href="../assets/css/travel.style.css">
+
+  <!-- CSS Customization -->
+  <link rel="stylesheet" href="../assets/plugins/jquery-steps/css/custom-jquery.steps.css">
+  <link rel="stylesheet" href="../assets/css/custom3.css">
+  <link rel="stylesheet" href="../assets/css/pages/shortcode_timeline1.css">
+
+</head>
+
+<body>
+  <% if (htmlWebpackPlugin.options.gtmKey) { %>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=<%= htmlWebpackPlugin.options.gtmKey %>" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <% } %>
+
+  <app>
+    Cargando...
+  </app>
+
+  <!-- Scripts will be injected by webpack here -->
+
+  <!-- JS Global Compulsory -->
+  <script type="text/javascript" src="../assets/plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/jquery/jquery-migrate.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <!-- JS Implementing Plugins -->
+  <script type="text/javascript" src="../assets/plugins/back-to-top.js"></script>
+  <script type="text/javascript" src="../assets/plugins/smoothScroll.js"></script>
+  <script type="text/javascript" src="../assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+  <script type="text/javascript" src="../assets/plugins/layer-slider/layerslider/js/greensock.js"></script>
+  <script type="text/javascript" src="../assets/plugins/layer-slider/layerslider/js/layerslider.transitions.js"></script>
+  <script type="text/javascript" src="../assets/plugins/layer-slider/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+
+  <script type="text/javascript" src="../assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+  <!-- <script type="text/javascript" src="../assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script> -->
+
+  <!-- JS Customization -->
+  <script type="text/javascript" src="../assets/js/custom.js"></script>
+  <!-- JS Page Level -->
+  <script type="text/javascript" src="../assets/js/app.js"></script>
+  <script type="text/javascript" src="../assets/js/plugins/layer-slider.js"></script>
+  <!-- <script type="text/javascript" src="../assets/js/plugins/style-switcher.js"></script> -->
+  <script type="text/javascript" src="../assets/js/plugins/owl-carousel.js"></script>
+  <script type="text/javascript" src="../assets/js/plugins/master-slider.js"></script>
+  <script type="text/javascript" src="../assets/js/plugins/owl-recent-works.js"></script>
+  <script type="text/javascript" src="../assets/js/forms/reg.js"></script>
+  <script type="text/javascript" src="../assets/js/forms/checkout.js"></script>
+  <script type="text/javascript" src="../assets/js/plugins/datepicker.js"></script>
+  <!-- <script type="text/javascript" src="../assets/js/plugins/style-switcher.js"></script> -->
+
+  <!--[if lt IE 9]>
+	<script src="assets/plugins/respond.js"></script>
+	<script src="assets/plugins/html5shiv.js"></script>
+	<script src="assets/plugins/placeholder-IE-fixes.js"></script>
+	<![endif]-->
+
+
+  <script src="../assets/plugins/owl-carousel2/owl.carousel.min.js"></script>
+  <script src="../assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+  <script src="../assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+  <script src="../assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+  <!-- <script src="../assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script> -->
+  <script src="../assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&amp;callback=initMap" async defer></script><script src="assets/js/plugins/gmaps-ini.js"></script> -->
+
+
+  <!-- JS Page Level -->
+  <!-- <script type="text/javascript" src="../assets/js/plugins/cube-portfolio/cube-portfolio-3.js"></script> -->
+  <script src="../assets/js/plugins/owl-carousel2.js"></script>
+  <script src="../assets/js/plugins/datepicker.js"></script>
+
+  <script src="../assets/js/forms/contact.js"></script>
+
+  <!-- Master Slider -->
+  <script src="../assets/plugins/master-slider/masterslider/masterslider.min.js"></script>
+  <script src="../assets/plugins/master-slider/masterslider/jquery.easing.min.js"></script>
+
+  <script type="text/javascript" src="../assets/js/custom.js"></script>
+  <script type="text/javascript" src="../assets/js/app.js"></script>
+  <script type="text/javascript" src="../assets/js/plugins/stepWizard.js"></script>
+  <script type="text/javascript" src="../assets/plugins/jquery-steps/build/jquery.steps.js"></script>
+  <!-- <script src="../assets/js/one.app.js"></script> -->
+
+  <script type="text/javascript">
+    jQuery(document).ready(function () {
+      setTimeout(() => {
+        App.init();
+        LayerSlider.initLayerSlider();
+        OwlCarousel.initOwlCarousel();
+        OwlRecentWorks.initOwlRecentWorksV2();
+
+        RegForm.initRegForm();
+        Datepicker.initDatepicker();
+        CheckoutForm.initCheckoutForm();
+        StepWizard.initStepWizard();
+        (function ($, window, document, undefined) {
+          'use strict';
+          // init cubeportfolio
+          $('#js-grid-full-width').cubeportfolio({
+            filters: '#js-filters-full-width',
+            loadMore: '#js-loadMore-full-width',
+            loadMoreAction: 'click',
+            layoutMode: 'mosaic',
+            sortToPreventGaps: true,
+            defaultFilter: '*',
+            animationType: 'fadeOutTop',
+            gapHorizontal: 0,
+            gapVertical: 0,
+            gridAdjustment: 'responsive',
+            mediaQueries: [{
+              width: 1500,
+              cols: 5
+            }, {
+              width: 1100,
+              cols: 4
+            }, {
+              width: 800,
+              cols: 3
+            }, {
+              width: 480,
+              cols: 2
+            }, {
+              width: 320,
+              cols: 1
+            }],
+            caption: 'zoom',
+            displayType: 'lazyLoading',
+            displayTypeSpeed: 100,
+
+            // lightbox
+            lightboxDelegate: '.cbp-lightbox',
+            lightboxGallery: true,
+            lightboxTitleSrc: 'data-title',
+            lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
+          });
+        })(jQuery, window, document);
+
+
+        (function ($, window, document, undefined) {
+          'use strict';
+
+          var gridContainer = $('#grid-container'),
+            filtersContainer = $('#filters-container'),
+            wrap, filtersCallback;
+
+
+          /*********************************
+              init cubeportfolio
+           *********************************/
+          gridContainer.cubeportfolio({
+            layoutMode: 'grid',
+            rewindNav: true,
+            scrollByPage: false,
+            defaultFilter: '*',
+            animationType: 'slideLeft',
+            gapHorizontal: 20,
+            gapVertical: 20,
+            gridAdjustment: 'responsive',
+            mediaQueries: [{
+              width: 800,
+              cols: 3
+            }, {
+              width: 500,
+              cols: 2
+            }, {
+              width: 320,
+              cols: 1
+            }],
+            caption: 'zoom',
+            displayType: 'lazyLoading',
+            displayTypeSpeed: 100
+          });
+
+
+          /*********************************
+              add listener for filters
+           *********************************/
+          if (filtersContainer.hasClass('cbp-l-filters-dropdown')) {
+            wrap = filtersContainer.find('.cbp-l-filters-dropdownWrap');
+
+            wrap.on({
+              'mouseover.cbp': function () {
+                wrap.addClass('cbp-l-filters-dropdownWrap-open');
+              },
+              'mouseleave.cbp': function () {
+                wrap.removeClass('cbp-l-filters-dropdownWrap-open');
+              }
+            });
+
+            filtersCallback = function (me) {
+              wrap.find('.cbp-filter-item').removeClass('cbp-filter-item-active');
+              wrap.find('.cbp-l-filters-dropdownHeader').text(me.text());
+              me.addClass('cbp-filter-item-active');
+              wrap.trigger('mouseleave.cbp');
+            };
+          } else {
+            filtersCallback = function (me) {
+              me.addClass('cbp-filter-item-active').siblings().removeClass('cbp-filter-item-active');
+            };
+          }
+
+          filtersContainer.on('click.cbp', '.cbp-filter-item', function () {
+            var me = $(this);
+
+            if (me.hasClass('cbp-filter-item-active')) {
+              return;
+            }
+
+            // get cubeportfolio data and check if is still animating (reposition) the items.
+            if (!$.data(gridContainer[0], 'cubeportfolio').isAnimating) {
+              filtersCallback.call(null, me);
+            }
+
+            // filter the items
+            gridContainer.cubeportfolio('filter', me.data('filter'), function () { });
+          });
+
+
+          /*********************************
+              activate counter for filters
+           *********************************/
+          gridContainer.cubeportfolio('showCounter', filtersContainer.find('.cbp-filter-item'), function () {
+            // read from url and change filter active
+            var match = /#cbpf=(.*?)([#|?&]|$)/gi.exec(location.href),
+              item;
+            if (match !== null) {
+              item = filtersContainer.find('.cbp-filter-item').filter('[data-filter="' + match[1] + '"]');
+              if (item.length) {
+                filtersCallback.call(null, item);
+              }
+            }
+          });
+
+        })(jQuery, window, document);
+
+        // Master slider 
+        var MasterSliderShowcase2 = function () {
+
+          return {
+
+            //Master Slider
+            initMasterSliderShowcase2: function () {
+              var slider = new MasterSlider();
+
+              slider.control('arrows');
+              slider.control('thumblist', { autohide: false, dir: 'h', arrows: false, align: 'bottom', width: 180, height: 170, margin: 5, space: 5 });
+
+              slider.setup('masterslider', {
+                width: 550,
+                height: 550,
+                space: 5,
+                view: 'fade'
+              });
+            }
+
+          };
+
+        }();
+
+        MasterSliderShowcase2.initMasterSliderShowcase2();
+
+      }, 3000);
+    });
+  </script>
+
+
+  <script>
+    function onSearch() {
+      var origin = $("select#origenList").val();
+      var destination = $("select#destinoList").val();
+
+      window.location.href = 'shop-ui-filter-grid.html?origen=' + origin + '&destino=' + destination;
+    }
+  </script>
+</body>
+
+</html>

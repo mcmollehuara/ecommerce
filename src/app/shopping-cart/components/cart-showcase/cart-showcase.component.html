@@ -1,0 +1,10 @@
+<div class="cart-showcase">
+  <div class="sc-item-container" *ngFor="let carItem of items"
+       [ngClass]="[xsClass, sClass, mClass, lClass, xlClass, ratioClass]">
+    <div class="sc-item-wrapper">
+      <ng-container
+        *cartShowcaseOutlet="itemComponent;item:carItem;format:format;injector:injector;ngModuleFactory:moduleFactory">
+      </ng-container>
+    </div>
+  </div>
+</div>

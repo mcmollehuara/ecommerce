@@ -1,0 +1,10 @@
+<div class="showcase-item default-sc-item" [ngStyle]="{'background-image': 'url(' + item.getImage() + ')'}">
+  <div class="default-sc-description">
+    <div class="default-sc-name">
+      {{item.getName()}}
+    </div>
+    <div class="default-sc-price">
+      {{item.getPrice() | cartCurrency:format}}
+    </div>
+  </div>
+</div>

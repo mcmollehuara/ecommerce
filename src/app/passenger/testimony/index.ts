@@ -1,0 +1,1 @@
+export { TestimonyModule } from "./testimony.module"

@@ -1,0 +1,173 @@
+			<!--=== Breadcrumbs v4 ===-->
+			<div class="breadcrumbs-v4">
+				<div class="container">
+					<span class="page-name">Contacto</span>
+					<h1>Estamos atentos a servirte</h1>
+					<ul class="breadcrumb-v4-in">
+						<li>
+							<a href="/app/inicio" >Inicio</a>
+						</li>
+						<li class="active">Contacto</li>
+					</ul>
+				</div>
+				<!--/end container-->
+			</div>
+			<!--=== End Breadcrumbs v4 ===-->
+
+			<!--=== Content Part ===-->
+			<div class="container content">
+				<div class="row margin-bottom-30">
+					<div class="col-md-9 mb-margin-bottom-30">
+						<div class="headline">
+							<h2>Ubicanos</h2>
+						</div>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15598.643869171752!2d-76.97792198494803!3d-12.203456663622473!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1486164054892"
+						 width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+
+						<!--Invoice Table-->
+						<div class="panel panel-default margin-bottom-40">
+							<div class="panel-heading">
+								<h3 class="panel-title">Sedes</h3>
+							</div>
+
+							<table class="table table-striped invoice-table">
+								<thead>
+									<tr>
+										<th></th>
+										<th>Provincia</th>
+										<th class="hidden-sm">Direccion</th>
+										<th>Telefonos</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td></td>
+										<td>Trujillo </td>
+										<td class="hidden-sm">Av. Nicolás de Piérola Nº 1079 - Santa Inés</td>
+										<td> 076 - 368289 | 076 - 367504</td>
+
+									</tr>
+									<tr>
+										<td></td>
+										<td>Trujillo </td>
+										<td class="hidden-sm">Av. Nicolás de Piérola Nº 1079 - Santa Inés</td>
+										<td> 076 - 368289 | 076 - 367504</td>
+
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+						<!--End Invoice Table-->
+						<form action="assets/php/sky-forms-pro/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form sky-changes-3">
+							<fieldset>
+								<div class="row">
+									<section class="col col-6">
+										<label class="label">Name</label>
+										<label class="input">
+											<i class="icon-append fa fa-user"></i>
+											<input type="text" name="name" id="name">
+										</label>
+									</section>
+									<section class="col col-6">
+										<label class="label">E-mail</label>
+										<label class="input">
+											<i class="icon-append fa fa-envelope-o"></i>
+											<input type="email" name="email" id="email">
+										</label>
+									</section>
+								</div>
+
+								<section>
+									<label class="label">Subject</label>
+									<label class="input">
+										<i class="icon-append fa fa-tag"></i>
+										<input type="text" name="subject" id="subject">
+									</label>
+								</section>
+
+								<section>
+									<label class="label">Message</label>
+									<label class="textarea">
+										<i class="icon-append fa fa-comment"></i>
+										<textarea rows="4" name="message" id="message"></textarea>
+									</label>
+								</section>
+
+								<section>
+									<label class="label">Enter characters below:</label>
+									<label class="input input-captcha">
+										<img src="assets/plugins/sky-forms-pro/skyforms/captcha/image.php?<?php echo time(); ?>" width="100" height="32" alt="Captcha image"
+										/>
+										<input type="text" maxlength="6" name="captcha" id="captcha">
+									</label>
+								</section>
+
+								<section>
+									<label class="checkbox">
+										<input type="checkbox" name="copy">
+										<i></i>Send a copy to my e-mail address</label>
+								</section>
+							</fieldset>
+
+							<footer>
+								<button type="submit" class="btn-u">Send message</button>
+							</footer>
+
+							<div class="message">
+								<i class="rounded-x fa fa-check"></i>
+								<p>Your message was successfully sent!</p>
+							</div>
+						</form>
+					</div>
+					<!--/col-md-9-->
+
+					<div class="col-md-3">
+						<!-- Contacts -->
+						<div class="headline">
+							<h2>Contacto</h2>
+						</div>
+						<ul class="list-unstyled who margin-bottom-30">
+							<br />
+							<li>
+								<a  [routerLink]="['/app/enconstruccion']" >
+									<i class="fa fa-home"></i> Av. Bauzate y Meza N� 116-126 - La Victoria</a>
+							</li>
+							<li>
+								<a  [routerLink]="['/app/enconstruccion']" >
+									<i class="fa fa-envelope"></i>reservas@turismodias.net</a>
+							</li>
+							<li>
+								<a  [routerLink]="['/app/enconstruccion']" >
+									<i class="fa fa-phone"></i>T: 01-3304682</a>
+							</li>
+							<li>
+								<a  [routerLink]="['/app/enconstruccion']" >
+									<i class="fa fa-globe"></i>http://www.turismodias.net</a>
+							</li>
+						</ul>
+
+						<!-- Business Hours -->
+						<div class="headline">
+							<h2>Horario Atencion</h2>
+						</div>
+						<ul class="list-unstyled margin-bottom-30">
+							<li>
+								<strong>Lunes-Viernes:</strong> 10am to 8pm</li>
+							<li>
+								<strong>Sabados:</strong> 11am to 3pm</li>
+							<li>
+								<strong>Domignos:</strong> 11am to 3pm</li>
+						</ul>
+
+
+					</div>
+					<!--/col-md-3-->
+				</div>
+				<!--/row-->
+			</div>
+			<!--/container-->
