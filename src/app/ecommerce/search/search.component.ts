@@ -12,16 +12,28 @@ import { AppCartItem } from "./../../app-cart-item";
 })
 
 export class SearchComponent implements OnInit {
- //Setup CartItem
+    //Setup CartItem
     //
-    cartItem: AppCartItem;
-    backupItem: AppCartItem;
     currentKey = 'cartItem';
     quantity = 1;
     custom = false;
     label = 'Agregar al Carrito';
     editor = 'button';
     position = 'left';
+    //
+    itemId: number;
+    itemName: string;
+    itemImages: Array<string>;
+    itemQuantity: number;
+    itemPrice: number;
+
+    itemDescription: string;
+    itemServiceName: string;
+    itemDeparture: string;
+    itemArrival: string;
+    itemDepartureHour: string;
+    itemPriceLevel1: number;
+    itemPriceLevel2: number;
     //
     itinerary: any = [];
     _itinerary: any = [];
@@ -115,6 +127,22 @@ export class SearchComponent implements OnInit {
         let self = this;
         self.router.navigate(["app/ecommerce/busqueda"]);
         self._pageItems = 20;
+    }
+
+    getAppCartItem(item: any): AppCartItem {
+        
+        let _cartItem = new AppCartItem({
+            identifier: Date.now(),
+            itemId: item.id,
+            label: `${item.departure}-${item.arrival}`,
+            cost: item.priceLivel1,
+            amount: 1,
+            country: 'PE',
+            description: `Pasaje ida de ${item.departure} a ${item.arrival}. 
+            La hora de salida es ${item.departureHour}.`,
+            photo: 'assets-trans/img/blog/28e.jpg'
+        });
+        return _cartItem;
     }
 }
 

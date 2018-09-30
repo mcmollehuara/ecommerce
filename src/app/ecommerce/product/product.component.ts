@@ -16,7 +16,6 @@ export class ProductComponent implements OnInit {
     //Setup CartItem
     //
     cartItem: AppCartItem;
-    backupItem: AppCartItem;
     currentKey = 'cartItem';
     // quantity = 1;
     custom = false;
