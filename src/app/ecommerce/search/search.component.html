@@ -182,6 +182,10 @@
                             <a class="product-review" routerLink="/app/ecommerce/producto/{{i.id}}">Detalle</a>
                             <a class="add-to-cart" routerLink="/app/ecommerce/carrito/{{i.id}}">
                                 <i class="fa fa-shopping-cart"></i>Agregar al carrito</a>
+                            <add-to-cart (added)="addToCart($event)" [item]="cartItem" [custom]="custom" (change)="quantityChanged($event)"
+                                [type]="editor" [position]="position" [quantity]="quantity" [buttonText]="label">
+
+                            </add-to-cart>
                             <div class="shop-rgba-dark-green rgba-banner">Nuevo</div>
                         </div>
                         <div class="product-description product-description-brd margin-bottom-30">

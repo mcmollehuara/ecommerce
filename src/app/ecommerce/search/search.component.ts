@@ -3,8 +3,8 @@ import { Component, OnInit, Type } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 //
 import { SearchService } from "./services/search.service";
-// import { setFlagsFromString } from 'v8';
 //
+import { AppCartItem } from "./../../app-cart-item";
 
 @Component({
     selector: 'search',
@@ -12,6 +12,17 @@ import { SearchService } from "./services/search.service";
 })
 
 export class SearchComponent implements OnInit {
+ //Setup CartItem
+    //
+    cartItem: AppCartItem;
+    backupItem: AppCartItem;
+    currentKey = 'cartItem';
+    quantity = 1;
+    custom = false;
+    label = 'Agregar al Carrito';
+    editor = 'button';
+    position = 'left';
+    //
     itinerary: any = [];
     _itinerary: any = [];
     arrivals: any = [];
@@ -20,11 +31,11 @@ export class SearchComponent implements OnInit {
     departureSelected: string = "";
     serviceType: any = [];
     serviceTypeSelected: string = "";
-
+    //
     pageItems: number[] = [20, 10, 5];
     _pageItems: number = 20;
     orderBy: string[] = ["Todos", "Destino", "Tipo Servicio"];
-
+    //
     constructor(private searchService: SearchService,
         private activatedRoute: ActivatedRoute,
         private router: Router
