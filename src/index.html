@@ -170,13 +170,17 @@
   <!-- <script src="../assets/js/one.app.js"></script> -->
 
   <script type="text/javascript">
-    jQuery(document).ready(function () {
-      setTimeout(() => {
-        App.init();
+  jQuery(document).ready(function () {
+    setTimeout(() => {
+      App.init();
         LayerSlider.initLayerSlider();
         OwlCarousel.initOwlCarousel();
         OwlRecentWorks.initOwlRecentWorksV2();
+    }, 2000);
+  });
 
+    jQuery(document).ready(function () {
+      setTimeout(() => {
         RegForm.initRegForm();
         Datepicker.initDatepicker();
         CheckoutForm.initCheckoutForm();
@@ -349,16 +353,6 @@
 
       }, 3000);
     });
-  </script>
-
-
-  <script>
-    function onSearch() {
-      var origin = $("select#origenList").val();
-      var destination = $("select#destinoList").val();
-
-      window.location.href = 'shop-ui-filter-grid.html?origen=' + origin + '&destino=' + destination;
-    }
   </script>
 </body>
 

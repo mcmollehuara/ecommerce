@@ -67,7 +67,8 @@ registerLocaleData(localeEs);
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(ROUTES, {
-      useHash: Boolean(history.pushState) === false,
+      // useHash: Boolean(history.pushState) === false,
+      useHash: true,
       preloadingStrategy: PreloadAllModules
     }),
     ShoppingCartModule.forRoot({
