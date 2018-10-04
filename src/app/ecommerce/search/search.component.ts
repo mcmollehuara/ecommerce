@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
     //
     currentKey = 'cartItem';
     quantity = 1;
-    custom = false;
+    custom = true;
     label = 'Agregar al Carrito';
     editor = 'button';
     position = 'left';
@@ -143,6 +143,11 @@ export class SearchComponent implements OnInit {
             photo: 'assets-trans/img/blog/28e.jpg'
         });
         return _cartItem;
+    }
+
+    addToCart(item) {
+        console.log('added', item);
+        // console.log('cart items', this.cartService.getItems());
     }
 }
 

@@ -126,12 +126,13 @@
                         <button type='button' class="quantity-button" name='add' (click)='quantityChanged(1)' 
                             value='+'>+</button>
                     </form>
-                    <button type="button" class="btn-u btn-u-sea-shop btn-u-lg">Agregar
-                        al carrito</button>
-                    <!-- <add-to-cart (added)="addToCart($event)" [item]="cartItem" [custom]="custom" (change)="quantityChanged($event)"
+                    <!-- <button type="button" class="btn-u btn-u-sea-shop btn-u-lg">Agregar
+                        al carrito</button> -->
+                    <add-to-cart (added)="addToCart($event)" [item]="cartItem" [custom]="custom" (change)="quantityChanged($event)"
                         [type]="editor" [position]="position" [quantity]="itemQuantity" [buttonText]="label">
-                        
-                    </add-to-cart> -->
+                        <button type="button" class="btn-u btn-u-sea-shop btn-u-lg">Agregar
+                                al carrito</button>
+                    </add-to-cart>
                 </div>
 
 

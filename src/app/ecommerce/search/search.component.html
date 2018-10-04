@@ -180,12 +180,16 @@
                                     alt="">
                             </a>
                             <a class="product-review" routerLink="/app/ecommerce/producto/{{i.id}}">Detalle</a>
-                            <a class="add-to-cart" routerLink="/app/ecommerce/carrito">
-                                <i class="fa fa-shopping-cart"></i>Agregar al carrito</a>
-                            <!-- <add-to-cart (added)="addToCart($event)" [item]="getAppCartItem(i)" [custom]="custom" (change)="quantityChanged($event)"
-                                [type]="editor" [position]="position" [quantity]="quantity" [buttonText]="label">
-
-                            </add-to-cart> -->
+                            <!-- <a class="add-to-cart" routerLink="/app/ecommerce/carrito">
+                                <i class="fa fa-shopping-cart"></i>Agregar al carrito</a> -->
+                            <add-to-cart (added)="addToCart($event)" [item]="getAppCartItem(i)" [custom]="custom"
+                                (change)="quantityChanged($event)" [type]="editor" [position]="position" [quantity]="quantity"
+                                [buttonText]="label">
+                                <!-- <button class="add-to-cart">Agregar
+                                    al carrito</button> -->
+                                <button class="add-to-cart">
+                                    <i class="fa fa-shopping-cart"></i>Agregar al carrito</button>
+                            </add-to-cart>
                             <div class="shop-rgba-dark-green rgba-banner">Nuevo</div>
                         </div>
                         <div class="product-description product-description-brd margin-bottom-30">

@@ -18,7 +18,7 @@ export class ProductComponent implements OnInit {
     cartItem: AppCartItem;
     currentKey = 'cartItem';
     // quantity = 1;
-    custom = false;
+    custom = true;
     label = 'Agregar al Carrito';
     editor = 'button';
     position = 'left';

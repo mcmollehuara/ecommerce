@@ -135,11 +135,13 @@ export class CartViewComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   increase(item: CartItem) {
+    console.log('increase');
     item.setQuantity(item.getQuantity() + 1);
     this.cartService.addItem(item);
   }
 
   decrease(item: CartItem) {
+    console.log('decrease');
     if (item.getQuantity() > 1) {
       item.setQuantity(item.getQuantity() - 1);
       this.cartService.addItem(item);

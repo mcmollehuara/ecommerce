@@ -13,10 +13,21 @@ import { AppCartItem } from '../../app-cart-item';
 export class CartComponent implements OnInit {
     //Setup
     display: CartViewDisplay = 'responsive-table';
-    tax = 0;
-    shipping = 0;
+    tax = 18;
+    shipping = 10;
     showImages = true;
     useCustom = false;
+    emptyText='Carrito vacio';
+    nameHeaderText= 'Nombre';
+    quantityHeaderText='Cantidad';
+    
+    priceHeaderText='Precio';
+    totalHeaderText='Total';
+    taxFooterText='Impuestos';
+    shippingFooterText='Costo Envio';
+    totalFooterText='Total';
+
+
 
     //Constructor
     constructor(private cartService: CartService<AppCartItem>) { }

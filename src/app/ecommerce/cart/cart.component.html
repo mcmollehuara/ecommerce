@@ -17,11 +17,7 @@
 </div>
 <!--=== End Breadcrumbs v4 ===-->
 <!--=== Content Medium Part ===-->
-<section>
-    <!-- <cart-view [display]="display" [images]="showImages" [customEmptyContent]="useCustom">
-        <h1 style="text-align: center">Empty cart</h1>
-    </cart-view> -->
-</section>
+
 <div class="content-md margin-bottom-30" style=" padding-top:0px">
     <div class="container   g-pt-100">
         <form class="shopping-cart" action="#">
@@ -30,121 +26,15 @@
                     <div class="overflow-h">
                         <h2>Carrito de compras</h2>
                         <p>Revise y edite su orden</p>
-                        <i class="rounded-x fa fa-check"></i>
                     </div>
                 </div>
-               
                 <section>
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Servicio</th>
-                                    <th>Precio</th>
-                                    <th>Cantidad</th>
-                                    <th>Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="product-in-table">
-                                        <img class="img-responsive" src="assets-trans/img/thumb/08.jpg" alt="">
-                                        <div class="product-it-in">
-                                            <h3>Lima-Chiclayo</h3>
-                                            <span>Salida: 10am Terminal Lima Norte</span>
-                                        </div>
-                                    </td>
-                                    <td>S/. 160.00</td>
-                                    <td>
-                                        <button type='button' class="quantity-button" name='subtract' onclick='javascript: subtractQty1();'
-                                            value='-'>-</button>
-                                        <input type='text' class="quantity-field" name='qty1' value="5" id='qty1' />
-                                        <button type='button' class="quantity-button" name='add' onclick='javascript: document.getElementById("qty1").value++;'
-                                            value='+'>+</button>
-                                    </td>
-                                    <td class="shop-red">S/. 320.00</td>
-                                    <td>
-                                        <button type="button" class="Cerrar">
-                                            <span>&times;</span>
-                                            <span class="sr-only">Cerrar</span>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="product-in-table">
-                                        <img class="img-responsive" src="assets-trans/img/thumb/07.jpg" alt="">
-                                        <div class="product-it-in">
-                                            <h3>Lima-Chiclayo</h3>
-                                            <span>Salida: 10am Terminal Lima Norte</span>
-                                        </div>
-                                    </td>
-                                    <td>S/. 160.00</td>
-                                    <td>
-                                        <button type='button' class="quantity-button" name='subtract' onclick='javascript: subtractQty1();'
-                                            value='-'>-</button>
-                                        <input type='text' class="quantity-field" name='qty1' value="5" id='qty1' />
-                                        <button type='button' class="quantity-button" name='add' onclick='javascript: document.getElementById("qty1").value++;'
-                                            value='+'>+</button>
-                                    </td>
-                                    <td class="shop-red">S/. 320.00</td>
-                                    <td>
-                                        <button type="button" class="Cerrar">
-                                            <span>&times;</span>
-                                            <span class="sr-only">Cerrar</span>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="product-in-table">
-                                        <img class="img-responsive" src="assets-trans/img/thumb/06.jpg" alt="">
-                                        <div class="product-it-in">
-                                            <h3>Lima-Chiclayo</h3>
-                                            <span>Salida: 10am Terminal Lima Norte</span>
-                                        </div>
-                                    </td>
-                                    <td>S/. 160.00</td>
-                                    <td>
-                                        <button type='button' class="quantity-button" name='subtract' onclick='javascript: subtractQty1();'
-                                            value='-'>-</button>
-                                        <input type='text' class="quantity-field" name='qty1' value="5" id='qty1' />
-                                        <button type='button' class="quantity-button" name='add' onclick='javascript: document.getElementById("qty1").value++;'
-                                            value='+'>+</button>
-                                    </td>
-                                    <td class="shop-red">S/. 320.00</td>
-                                    <td>
-                                        <button type="button" class="Cerrar">
-                                            <span>&times;</span>
-                                            <span class="sr-only">Cerrar</span>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="product-in-table">
-                                        <img class="img-responsive" src="assets-trans/img/thumb/09.jpg" alt="">
-                                        <div class="product-it-in">
-                                            <h3>Lima-Chiclayo</h3>
-                                            <span>Salida: 10am Terminal Lima Norte</span>
-                                        </div>
-                                    </td>
-                                    <td>S/. 160.00</td>
-                                    <td>
-                                        <button type='button' class="quantity-button" name='subtract' onclick='javascript: subtractQty1();'
-                                            value='-'>-</button>
-                                        <input type='text' class="quantity-field" name='qty1' value="5" id='qty1' />
-                                        <button type='button' class="quantity-button" name='add' onclick='javascript: document.getElementById("qty1").value++;'
-                                            value='+'>+</button>
-                                    </td>
-                                    <td class="shop-red">S/. 320.00</td>
-                                    <td>
-                                        <button type="button" class="Cerrar">
-                                            <span>&times;</span>
-                                            <span class="sr-only">Cerrar</span>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <cart-view [display]="display" [images]="showImages" [customEmptyContent]="useCustom"
+                        [nameHeaderText]="nameHeaderText" [emptyText]="emptyText" [quantityHeaderText]="quantityHeaderText"
+                        [priceHeaderText]="priceHeaderText" [totalHeaderText]="totalHeaderText" [taxFooterText]="taxFooterText"
+                        [shippingFooterText]="shippingFooterText" [totalFooterText]="totalFooterText">
+                        <h1 style="text-align: center">Carro vacio</h1>
+                    </cart-view>
                 </section>
 
                 <div class="header-tags">
@@ -390,40 +280,6 @@
                         </div>
                     </div>
                 </section>
-
-                <div class="coupon-code">
-                    <div class="row">
-                        <div class="col-sm-4 sm-margin-bottom-30">
-                            <h3>Codigo descuento</h3>
-                            <p>Ingrese su código</p>
-                            <input class="form-control margin-bottom-10" name="code" type="text">
-                            <button type="button" class="btn-u btn-u-sea-shop">Suscribirse</button>
-                        </div>
-                        <div class="col-sm-3 col-sm-offset-5">
-                            <ul class="list-inline total-result">
-                                <li>
-                                    <h4>Sub total:</h4>
-                                    <div class="total-result-in">
-                                        <span>S/. 1280.00</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h4>Envío:</h4>
-                                    <div class="total-result-in">
-                                        <span class="text-right">- - - -</span>
-                                    </div>
-                                </li>
-                                <li class="divider"></li>
-                                <li class="total-price">
-                                    <h4>Total:</h4>
-                                    <div class="total-result-in">
-                                        <span>S/. 1280.00</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </form>
     </div>
