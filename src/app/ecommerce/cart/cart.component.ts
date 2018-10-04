@@ -17,18 +17,20 @@ export class CartComponent implements OnInit {
     shipping = 10;
     showImages = true;
     useCustom = false;
-    emptyText='Carrito vacio';
-    nameHeaderText= 'Nombre';
-    quantityHeaderText='Cantidad';
-    
-    priceHeaderText='Precio';
-    totalHeaderText='Total';
-    taxFooterText='Impuestos';
-    shippingFooterText='Costo Envio';
-    totalFooterText='Total';
+    emptyText = 'Carrito vacio';
+    nameHeaderText = 'Nombre';
+    quantityHeaderText = 'Cantidad';
 
+    priceHeaderText = 'Precio';
+    totalHeaderText = 'Total';
+    taxFooterText = 'Impuestos';
+    shippingFooterText = 'Costo Envio';
+    totalFooterText = 'Total';
 
-
+    addressInvoice: {
+        firstName: '', lastName: '', email: '', phone: '', address1: '',
+        address2: '', city: '', ZipCode: '', sendPreviousInvoice: ''
+    }
     //Constructor
     constructor(private cartService: CartService<AppCartItem>) { }
 
